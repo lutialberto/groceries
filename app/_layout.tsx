@@ -1,7 +1,6 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { useColorScheme } from "react-native";
-import { ButtonApp } from "../components/ButtonApp";
 import {
   DarkTheme,
   DefaultTheme,
@@ -16,7 +15,8 @@ export default function RootLayout() {
     <SafeAreaView style={{ flex: 1 }}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <Stack>
-          <Stack.Screen name="dsa" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="+not-found" />
         </Stack>
       </ThemeProvider>
       <StatusBar style="auto" />
